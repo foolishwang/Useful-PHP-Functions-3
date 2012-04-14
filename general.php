@@ -44,6 +44,8 @@ function issetOr($first, $alternative = null)
  * @param string $separator_input  What divides the date up goung in.
  * @param string $sepatator_output What divides the date up going out.
  *
+ * @return string The date formatted to suit the US formatting.
+ *
  * @author Toby Osbourn <toby.osbourn@googlemail.com>
  */
 
