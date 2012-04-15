@@ -37,6 +37,20 @@ function issetOr($first, $alternative = null)
 }
 
 /**
+ * Returns $alternative if $value is empty
+ * 
+ * @param mixed $value
+ * @param mixed $alternative
+ *
+ * @return mixed
+ *
+ * @author adael <https://gist.github.com/1351278>
+ */
+function ifEmpty($value, $alternative = ''){
+    return empty($value) ? $alternative : $value;
+}
+
+/**
  * A very simple function to change the date from the UK
  * format to the American format.
  *
