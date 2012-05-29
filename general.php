@@ -69,3 +69,28 @@ function makeUSDate($uk_date, $separator_input = '/', $sepatator_output = '/')
 
     return $month.$sepatator_output.$day.$sepatator_output.$year;
 }
+
+/**
+ * Does a really simple check and attempts to do some
+ * fixing of names, so if people post a name in all caps
+ * or all lower case it will be converted to a standard
+ * case.
+ * 
+ * @param  string $unknown_name The name you want to check.
+ * 
+ * @return string               The fixed name.
+ * 
+ * @author  Toby Osbourn <toby.osbourn@googlemail.com>
+ */
+function fixNameCase($unknown_name)
+{
+    if (ctype_lower($unknown_name)) {
+        $name = ucfirst($unknown_name);
+    } elseif (ctype_upper($unknown_name)) {
+        $name = ucfirst(strtolower($unknown_name));
+    } else {
+        $name = $unknown_name;
+    }
+
+    return $name;
+}
